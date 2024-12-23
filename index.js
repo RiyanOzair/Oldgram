@@ -55,17 +55,3 @@ for (let i = 0; i < posts.length; i++) {
 mainEl.innerHTML = html
 
 
-let clickEL = document.getElementsByClassName("click-like")
-let  postEl = document.getElementsByClassName("post")
-
-clickEL.addEventListener("dblclick",function()){
-        for(let i = 0; i < posts.length; i++){
-            posts[i].likes = posts[i].likes + 1
-        }
-}
-
-postEl.addEventListener("dblclick",function()){
-        for(let i = 0; i < posts.length; i++){
-            posts[i].likes = posts[i].likes + 1
-        }
-}
