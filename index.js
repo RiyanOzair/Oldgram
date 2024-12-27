@@ -39,19 +39,34 @@ for (let i = 0; i < posts.length; i++) {
                         <h2 id="name">${posts[i].name}</h2>
                         <p id="location"> ${posts[i].location}</p>
                     </div>
-                    <img class="post" src="${posts[i].post}" alt="A picture of the famous ${posts[i].name}">
+                    <img class="post" id="post" src="${posts[i].post}" alt="A picture of the famous ${posts[i].name}">
                     <ul class="icons">
                         <li><img class="click-like" id="size" src="images/icon-heart.png" alt="" >
                         </li>
                         <li><img id="size" src="images/icon-comment.png" alt=""></li>
                         <li><img id="size" src="images/icon-dm.png" alt=""></li>
                     </ul>
-                    <p id="likes">${posts[i].likes} likes</p>
+                    <p> <span class="likes" id="likes">${posts[i].likes}</span> likes</p>
                     <p id="comment"><strong>${posts[i].username}</strong> ${posts[i].comment}</p>
         </section>
         `
 }
 
 mainEl.innerHTML = html
+
+const likesEl = document.getElementById('likes')
+const clickLike = document.getElementById('click-like')
+const postEl = document.getElementById('post')
+
+clickLike.addEventListener('click', function increment(){
+    let count = posts.likes
+    count++
+    likesEl.textContent = count
+})
+postEl.addEventListener('dblclick', function increment(){
+    let count = posts.likes
+    count++
+    likesEl.value = count
+})
 
 

@@ -94,10 +94,16 @@ header{
 #likes{
     font-size: 20px;
     font-weight: bold;
-    margin: 5px 20px;
+    margin: 5px 3px 5px 25px;
+    gap: 0  ;
     
     }
     
 #comment{
     border-bottom: 35px solid #edf2f4;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+    gap: 0  ;
 }
